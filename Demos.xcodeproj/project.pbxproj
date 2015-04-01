@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77E75DDC1ACC48C2005F6BFD /* structure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E75DDB1ACC48C2005F6BFD /* structure.plist */; };
 		77F5CDBC1AC7B5380016B8EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5CDBB1AC7B5380016B8EA /* AppDelegate.swift */; };
 		77F5CDBF1AC7B5380016B8EA /* Demos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77F5CDBD1AC7B5380016B8EA /* Demos.xcdatamodeld */; };
 		77F5CDC11AC7B5380016B8EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5CDC01AC7B5380016B8EA /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77E75DDB1ACC48C2005F6BFD /* structure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = structure.plist; sourceTree = "<group>"; };
 		77F5CDB61AC7B5380016B8EA /* Demos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F5CDBA1AC7B5380016B8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F5CDBB1AC7B5380016B8EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				77F5CDBA1AC7B5380016B8EA /* Info.plist */,
+				77E75DDB1ACC48C2005F6BFD /* structure.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				77F5CDC41AC7B5380016B8EA /* Main.storyboard in Resources */,
 				77F5CDC91AC7B5380016B8EA /* LaunchScreen.xib in Resources */,
+				77E75DDC1ACC48C2005F6BFD /* structure.plist in Resources */,
 				77F5CDC61AC7B5380016B8EA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				77F5CDDA1AC7B5380016B8EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77F5CDDB1AC7B5380016B8EA /* Build configuration list for PBXNativeTarget "DemosTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				77F5CDDD1AC7B5380016B8EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
