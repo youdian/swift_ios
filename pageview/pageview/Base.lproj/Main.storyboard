@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aAv-Fv-HHJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fHh-Nx-P18">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--引导页-->
         <scene sceneID="LPm-dB-dZK">
             <objects>
-                <viewController id="aAv-Fv-HHJ" customClass="ViewController" customModule="pageview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="introPage" title="引导页" id="aAv-Fv-HHJ" customClass="IntroViewController" customModule="pageview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aP1-wB-rl2"/>
                         <viewControllerLayoutGuide type="bottom" id="1vz-7o-Er1"/>
@@ -22,18 +22,18 @@
             </objects>
             <point key="canvasLocation" x="62" y="430"/>
         </scene>
-        <!--Page View Controller-->
+        <!--引导页容器-->
         <scene sceneID="0nb-oQ-Azu">
             <objects>
-                <pageViewController storyboardIdentifier="pageContainer" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="12" navigationOrientation="horizontal" spineLocation="none" id="Qln-jT-1Wp" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="pageContainer" autoresizesArchivedViewToFullSize="NO" title="引导页容器" transitionStyle="scroll" pageSpacing="12" navigationOrientation="horizontal" spineLocation="none" id="Qln-jT-1Wp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqJ-S6-nZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="785" y="421"/>
         </scene>
-        <!--Color View Controller-->
+        <!--引导页的内容页-->
         <scene sceneID="O99-56-z0m">
             <objects>
-                <viewController storyboardIdentifier="colorContent" id="9Wb-hd-Cqn" customClass="ColorViewController" customModule="pageview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="colorContent" title="引导页的内容页" id="9Wb-hd-Cqn" customClass="ColorViewController" customModule="pageview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LMy-FF-zHv"/>
                         <viewControllerLayoutGuide type="bottom" id="EtP-hi-9Az"/>
@@ -56,8 +56,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I99-S7-uEN">
-                                <rect key="frame" x="277" y="520" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="267" y="520" width="66" height="30"/>
+                                <state key="normal" title="Start App">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -86,6 +86,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rts-9m-DTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1436" y="430"/>
+        </scene>
+        <!--应用主页面-->
+        <scene sceneID="Jts-2G-mz9">
+            <objects>
+                <viewController storyboardIdentifier="mainController" title="应用主页面" id="fHh-Nx-P18" customClass="MainViewController" customModule="pageview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rre-jc-P36"/>
+                        <viewControllerLayoutGuide type="bottom" id="04k-Hr-6ic"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sDd-PN-CRw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="应用主界面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et6-xo-6hR">
+                                <rect key="frame" x="258" y="290" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="et6-xo-6hR" secondAttribute="centerY" id="859-vO-o9c"/>
+                            <constraint firstAttribute="centerX" secondItem="et6-xo-6hR" secondAttribute="centerX" id="rnN-Wp-dpY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdA-vQ-qar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="1082"/>
         </scene>
     </scenes>
     <resources>

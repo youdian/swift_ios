@@ -10,12 +10,30 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let keyVersion = "version"
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let prefs = NSUserDefaults.standardUserDefaults()
+        let versionOld = prefs.integerForKey(keyVersion)
+        let bundle: [String: AnyObject] = NSBundle.mainBundle().infoDictionary as! [String: AnyObject]
+        let versionName = bundle["CFBundleVersion"] as! String
+        let versionCurrent = versionName.toInt()!
+        println("current version = \(versionName)")
+        if versionCurrent == versionOld {
+            let mainViewController = storyBoard.instantiateViewControllerWithIdentifier("mainController") as! MainViewController
+            window?.rootViewController = mainViewController
+        } else {
+            let introViewController = storyBoard.instantiateViewControllerWithIdentifier("introPage") as! IntroViewController
+            window?.rootViewController = introViewController
+            prefs.setInteger(versionCurrent, forKey: keyVersion)
+            prefs.synchronize()
+        }
+        window?.makeKeyAndVisible()
         return true
     }
 

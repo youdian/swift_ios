@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPageViewControllerDataSource {
+class IntroViewController: UIViewController, UIPageViewControllerDataSource {
     var pageViewController: UIPageViewController!
     var pageTitles:[String]!
     var pageImages:[String]!
@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
         pageTitles = ["Page One", "Page Two", "Page Three", "Page Four"]
-        pageImages = ["intro1.jpg", "intro2.jpg", "intro3.jpg", "intro4.jpg"]
+        pageImages = ["intro1", "intro2", "intro3", "intro4"]
         pageViewController = storyboard?.instantiateViewControllerWithIdentifier("pageContainer") as! UIPageViewController
         pageViewController.dataSource = self
         let startingViewController = contentViewControllerAtIndex(0)
@@ -75,7 +75,6 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
 //    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
 //        return 0
 //    }
-
 
 
 }
