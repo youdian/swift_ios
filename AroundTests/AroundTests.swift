@@ -1,15 +1,15 @@
 //
-//  DemosTests.swift
-//  DemosTests
+//  AroundTests.swift
+//  AroundTests
 //
-//  Created by zhou zhou on 15/3/29.
-//  Copyright (c) 2015年 zhou zhou. All rights reserved.
+//  Created by 周周 on 15/6/14.
+//  Copyright (c) 2015年 youdian.org. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class DemosTests: XCTestCase {
+class AroundTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

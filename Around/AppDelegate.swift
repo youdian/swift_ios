@@ -1,13 +1,12 @@
 //
 //  AppDelegate.swift
-//  Demos
+//  Around
 //
-//  Created by zhou zhou on 15/3/29.
-//  Copyright (c) 2015年 zhou zhou. All rights reserved.
+//  Created by 周周 on 15/6/14.
+//  Copyright (c) 2015年 youdian.org. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,9 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
     }
-
 
 
 }
