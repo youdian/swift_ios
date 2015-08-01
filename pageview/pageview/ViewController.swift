@@ -9,25 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController, UIPageViewControllerDataSource {
-    var pageViewController: UIPageViewController?
+    var pageViewController: UIPageViewController!
     var pageTitles:[String]!
     var pageImages:[String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.blackColor()
         pageTitles = ["Page One", "Page Two", "Page Three", "Page Four"]
         pageImages = ["intro1.jpg", "intro2.jpg", "intro3.jpg", "intro4.jpg"]
-        pageViewController = storyboard?.instantiateViewControllerWithIdentifier("pageContainer") as? UIPageViewController
-        if pageViewController == nil {
-            println("page view controller is nil")
-        }
-        pageViewController!.dataSource = self
+        pageViewController = storyboard?.instantiateViewControllerWithIdentifier("pageContainer") as! UIPageViewController
+        pageViewController.dataSource = self
         let startingViewController = contentViewControllerAtIndex(0)
         let viewControllers:[ColorViewController] = [startingViewController]
-        pageViewController!.setViewControllers(viewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
-        pageViewController?.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        pageViewController.setViewControllers(viewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+//        pageViewController?.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        pageViewController.view.frame = self.view.bounds
         addChildViewController(pageViewController!)
         view.addSubview(pageViewController!.view)
+        didMoveToParentViewController(self)
         
     }
 
@@ -42,6 +42,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         colorContentView.pageCount = pageTitles.count
         let red = Double(index) / Double(pageTitles.count) + 0.1
         colorContentView.redPercent = CGFloat(red)
+        colorContentView.imageName = pageImages[index]
         return colorContentView
         
     }
@@ -66,14 +67,15 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         index--
         return contentViewControllerAtIndex(index)
     }
-    
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return pageTitles.count
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
+// implement below 2 methods will add an UIPageControl beneath the content view controller
+//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        return pageTitles.count
+//    }
+//    
+//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        return 0
+//    }
+
 
 
 }

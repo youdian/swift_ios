@@ -25,9 +25,7 @@
         <!--Page View Controller-->
         <scene sceneID="0nb-oQ-Azu">
             <objects>
-                <pageViewController storyboardIdentifier="pageContainer" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="12" navigationOrientation="horizontal" spineLocation="none" id="Qln-jT-1Wp" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                </pageViewController>
+                <pageViewController storyboardIdentifier="pageContainer" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="12" navigationOrientation="horizontal" spineLocation="none" id="Qln-jT-1Wp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqJ-S6-nZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="785" y="421"/>
@@ -44,6 +42,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro1" translatesAutoresizingMaskIntoConstraints="NO" id="Jof-Pm-2ZA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PageNumber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2du-2a-7kO">
                                 <rect key="frame" x="250" y="50" width="101" height="21"/>
                                 <constraints>
@@ -66,13 +67,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Jof-Pm-2ZA" secondAttribute="bottom" id="Dbk-DR-50H"/>
+                            <constraint firstItem="Jof-Pm-2ZA" firstAttribute="leading" secondItem="8PL-6j-7mX" secondAttribute="leading" id="FAw-04-gzS"/>
                             <constraint firstAttribute="bottom" secondItem="I99-S7-uEN" secondAttribute="bottom" constant="50" id="FWA-Ci-WfL"/>
+                            <constraint firstItem="Jof-Pm-2ZA" firstAttribute="top" secondItem="8PL-6j-7mX" secondAttribute="top" id="GD4-h1-W0a"/>
                             <constraint firstAttribute="centerX" secondItem="2du-2a-7kO" secondAttribute="centerX" id="X0o-00-1R3"/>
+                            <constraint firstAttribute="trailing" secondItem="Jof-Pm-2ZA" secondAttribute="trailing" id="Yu8-T3-Z5m"/>
                             <constraint firstItem="2du-2a-7kO" firstAttribute="top" secondItem="8PL-6j-7mX" secondAttribute="top" constant="50" id="ZGi-Lk-EPI"/>
                             <constraint firstAttribute="centerX" secondItem="I99-S7-uEN" secondAttribute="centerX" id="abg-nh-2Uj"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="introImageView" destination="Jof-Pm-2ZA" id="U5L-P9-4z9"/>
                         <outlet property="pageNumberLabel" destination="2du-2a-7kO" id="paa-hp-s9O"/>
                         <outlet property="startAppBtn" destination="I99-S7-uEN" id="LGl-Cn-naS"/>
                     </connections>
@@ -82,4 +88,7 @@
             <point key="canvasLocation" x="1436" y="430"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="intro1" width="400" height="300"/>
+    </resources>
 </document>

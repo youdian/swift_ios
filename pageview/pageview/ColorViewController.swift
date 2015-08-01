@@ -12,10 +12,12 @@ class ColorViewController: UIViewController {
     var pageIndex: Int = 0
     var pageCount: Int = 0
     var redPercent: CGFloat = 1
+    var imageName: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: redPercent, green: 0.5, blue: 0.5, alpha: 1)
         self.pageNumberLabel.text = "Page " + String(pageIndex + 1)
+        introImageView.image = UIImage(named: imageName)
         if pageIndex == pageCount - 1 {
             startAppBtn.hidden = false
         } else {
@@ -30,6 +32,7 @@ class ColorViewController: UIViewController {
     
     @IBOutlet weak var pageNumberLabel: UILabel!
 
+    @IBOutlet weak var introImageView: UIImageView!
     @IBOutlet weak var startAppBtn: UIButton!
     @IBAction func launchApp(sender: UIButton) {
         println("start the app")
