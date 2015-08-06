@@ -9,10 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var mapView: BMKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        mapView = BMKMapView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
+        self.view.addSubview(mapView)
     }
 
     override func didReceiveMemoryWarning() {

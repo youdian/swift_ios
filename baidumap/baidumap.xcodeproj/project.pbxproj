@@ -13,6 +13,15 @@
 		77DE3D681B73D0E100B7CD43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DE3D671B73D0E100B7CD43 /* Images.xcassets */; };
 		77DE3D6B1B73D0E100B7CD43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77DE3D691B73D0E100B7CD43 /* LaunchScreen.xib */; };
 		77DE3D771B73D0E100B7CD43 /* baidumapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE3D761B73D0E100B7CD43 /* baidumapTests.swift */; };
+		77DE3D821B73D0F500B7CD43 /* empty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77DE3D811B73D0F500B7CD43 /* empty.mm */; };
+		77DE3D841B73D13400B7CD43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DE3D831B73D13400B7CD43 /* CoreGraphics.framework */; };
+		77DE3D861B73D13B00B7CD43 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DE3D851B73D13B00B7CD43 /* CoreLocation.framework */; };
+		77DE3D881B73D15200B7CD43 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DE3D871B73D15200B7CD43 /* OpenGLES.framework */; };
+		77DE3D8A1B73D15900B7CD43 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DE3D891B73D15900B7CD43 /* QuartzCore.framework */; };
+		77DE3D8C1B73D16000B7CD43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DE3D8B1B73D16000B7CD43 /* Security.framework */; };
+		77DE3D8E1B73D16600B7CD43 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DE3D8D1B73D16600B7CD43 /* SystemConfiguration.framework */; };
+		77DE3D901B73D17400B7CD43 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DE3D8F1B73D17400B7CD43 /* BaiduMapAPI.framework */; };
+		77DE3D921B73D19C00B7CD43 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77DE3D911B73D19C00B7CD43 /* mapapi.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,16 @@
 		77DE3D701B73D0E100B7CD43 /* baidumapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baidumapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DE3D751B73D0E100B7CD43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DE3D761B73D0E100B7CD43 /* baidumapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baidumapTests.swift; sourceTree = "<group>"; };
+		77DE3D801B73D0F500B7CD43 /* baidumap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "baidumap-Bridging-Header.h"; sourceTree = "<group>"; };
+		77DE3D811B73D0F500B7CD43 /* empty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = empty.mm; sourceTree = "<group>"; };
+		77DE3D831B73D13400B7CD43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		77DE3D851B73D13B00B7CD43 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		77DE3D871B73D15200B7CD43 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		77DE3D891B73D15900B7CD43 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		77DE3D8B1B73D16000B7CD43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		77DE3D8D1B73D16600B7CD43 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		77DE3D8F1B73D17400B7CD43 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = "../../../Downloads/BaiduMap_IOSSDK_v2.8.1_All/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphonesimulator/BaiduMapAPI.framework"; sourceTree = "<group>"; };
+		77DE3D911B73D19C00B7CD43 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +62,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DE3D901B73D17400B7CD43 /* BaiduMapAPI.framework in Frameworks */,
+				77DE3D8E1B73D16600B7CD43 /* SystemConfiguration.framework in Frameworks */,
+				77DE3D8C1B73D16000B7CD43 /* Security.framework in Frameworks */,
+				77DE3D8A1B73D15900B7CD43 /* QuartzCore.framework in Frameworks */,
+				77DE3D881B73D15200B7CD43 /* OpenGLES.framework in Frameworks */,
+				77DE3D861B73D13B00B7CD43 /* CoreLocation.framework in Frameworks */,
+				77DE3D841B73D13400B7CD43 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +85,14 @@
 		77DE3D521B73D0E100B7CD43 = {
 			isa = PBXGroup;
 			children = (
+				77DE3D911B73D19C00B7CD43 /* mapapi.bundle */,
+				77DE3D8F1B73D17400B7CD43 /* BaiduMapAPI.framework */,
+				77DE3D8D1B73D16600B7CD43 /* SystemConfiguration.framework */,
+				77DE3D8B1B73D16000B7CD43 /* Security.framework */,
+				77DE3D891B73D15900B7CD43 /* QuartzCore.framework */,
+				77DE3D871B73D15200B7CD43 /* OpenGLES.framework */,
+				77DE3D851B73D13B00B7CD43 /* CoreLocation.framework */,
+				77DE3D831B73D13400B7CD43 /* CoreGraphics.framework */,
 				77DE3D5D1B73D0E100B7CD43 /* baidumap */,
 				77DE3D731B73D0E100B7CD43 /* baidumapTests */,
 				77DE3D5C1B73D0E100B7CD43 /* Products */,
@@ -83,6 +117,8 @@
 				77DE3D671B73D0E100B7CD43 /* Images.xcassets */,
 				77DE3D691B73D0E100B7CD43 /* LaunchScreen.xib */,
 				77DE3D5E1B73D0E100B7CD43 /* Supporting Files */,
+				77DE3D811B73D0F500B7CD43 /* empty.mm */,
+				77DE3D801B73D0F500B7CD43 /* baidumap-Bridging-Header.h */,
 			);
 			path = baidumap;
 			sourceTree = "<group>";
@@ -193,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77DE3D661B73D0E100B7CD43 /* Main.storyboard in Resources */,
+				77DE3D921B73D19C00B7CD43 /* mapapi.bundle in Resources */,
 				77DE3D6B1B73D0E100B7CD43 /* LaunchScreen.xib in Resources */,
 				77DE3D681B73D0E100B7CD43 /* Images.xcassets in Resources */,
 			);
@@ -212,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DE3D821B73D0F500B7CD43 /* empty.mm in Sources */,
 				77DE3D631B73D0E100B7CD43 /* ViewController.swift in Sources */,
 				77DE3D611B73D0E100B7CD43 /* AppDelegate.swift in Sources */,
 			);
@@ -340,9 +378,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhouzhou/Downloads/BaiduMap_IOSSDK_v2.8.1_All/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphonesimulator",
+				);
 				INFOPLIST_FILE = baidumap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "baidumap/baidumap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +396,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/zhouzhou/Downloads/BaiduMap_IOSSDK_v2.8.1_All/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphonesimulator",
+				);
 				INFOPLIST_FILE = baidumap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "baidumap/baidumap-Bridging-Header.h";
 			};
 			name = Release;
 		};
