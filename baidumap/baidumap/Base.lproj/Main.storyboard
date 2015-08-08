@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="baidumap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,81 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7j-fe-psp">
+                                <rect key="frame" x="0.0" y="20" width="600" height="380"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZsE-sX-Mm1">
+                                        <rect key="frame" x="8" y="8" width="94" height="29"/>
+                                    </stepper>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEt-vn-qa5">
+                                        <rect key="frame" x="32" y="45" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="Pwi-q2-IcI"/>
+                                        </constraints>
+                                        <state key="normal" title="定位">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="findMyLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mSd-nK-wjo"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="city" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HBw-jL-HeR">
+                                        <rect key="frame" x="119" y="7" width="98" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="98" id="CRL-M7-Tnc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="address" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQC-7X-bVX">
+                                        <rect key="frame" x="236" y="7" width="225" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="lRi-bh-Sfu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5au-k4-71a">
+                                        <rect key="frame" x="306" y="45" width="85" height="30"/>
+                                        <state key="normal" title="GeoCode">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="geoCode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="f5N-Dp-16n"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hQC-7X-bVX" firstAttribute="baseline" secondItem="HBw-jL-HeR" secondAttribute="baseline" id="1js-cm-Q7j"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZsE-sX-Mm1" secondAttribute="trailing" constant="498" id="4cJ-5u-3W4"/>
+                                    <constraint firstItem="DEt-vn-qa5" firstAttribute="top" secondItem="ZsE-sX-Mm1" secondAttribute="bottom" constant="8" id="75s-kz-U2q"/>
+                                    <constraint firstItem="ZsE-sX-Mm1" firstAttribute="leading" secondItem="Y7j-fe-psp" secondAttribute="leading" constant="8" id="C9Y-Ps-fsp"/>
+                                    <constraint firstItem="ZsE-sX-Mm1" firstAttribute="top" secondItem="Y7j-fe-psp" secondAttribute="top" constant="8" id="IXO-2G-RTg"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZsE-sX-Mm1" secondAttribute="bottom" constant="343" id="Jzp-p2-gsp"/>
+                                    <constraint firstItem="hQC-7X-bVX" firstAttribute="leading" secondItem="HBw-jL-HeR" secondAttribute="trailing" constant="19" id="Pum-Xa-TTP"/>
+                                    <constraint firstItem="5au-k4-71a" firstAttribute="baseline" secondItem="DEt-vn-qa5" secondAttribute="baseline" id="Uj8-S9-8W9"/>
+                                    <constraint firstItem="HBw-jL-HeR" firstAttribute="bottom" secondItem="ZsE-sX-Mm1" secondAttribute="bottom" id="V9B-gm-6mH"/>
+                                    <constraint firstItem="5au-k4-71a" firstAttribute="centerX" secondItem="HBw-jL-HeR" secondAttribute="centerX" constant="180.5" id="ZCt-0e-9AO"/>
+                                    <constraint firstItem="DEt-vn-qa5" firstAttribute="centerX" secondItem="ZsE-sX-Mm1" secondAttribute="centerX" id="c1a-NJ-nSo"/>
+                                    <constraint firstItem="HBw-jL-HeR" firstAttribute="leading" secondItem="ZsE-sX-Mm1" secondAttribute="trailing" constant="17" id="vHk-uJ-ud8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Y7j-fe-psp" secondAttribute="trailing" id="2Vb-eL-fMg"/>
+                            <constraint firstItem="Y7j-fe-psp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7dC-PE-MMG"/>
+                            <constraint firstItem="Y7j-fe-psp" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="c3m-Ef-4zw"/>
+                            <constraint firstAttribute="bottom" secondItem="Y7j-fe-psp" secondAttribute="bottom" constant="200" id="cgS-BJ-HHz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressText" destination="hQC-7X-bVX" id="U8J-PJ-vvT"/>
+                        <outlet property="locationText" destination="HBw-jL-HeR" id="STB-YZ-NQh"/>
+                        <outlet property="scrollView" destination="Y7j-fe-psp" id="Mjn-qU-dPB"/>
+                        <outlet property="stepper" destination="ZsE-sX-Mm1" id="NMF-tC-iax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

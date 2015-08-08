@@ -55,6 +55,7 @@
 		77DE3D8D1B73D16600B7CD43 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		77DE3D8F1B73D17400B7CD43 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = "../../../Downloads/BaiduMap_IOSSDK_v2.8.1_All/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphonesimulator/BaiduMapAPI.framework"; sourceTree = "<group>"; };
 		77DE3D911B73D19C00B7CD43 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
+		77F0B4821B7511940032B205 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,7 @@
 				77DE3D5E1B73D0E100B7CD43 /* Supporting Files */,
 				77DE3D811B73D0F500B7CD43 /* empty.mm */,
 				77DE3D801B73D0F500B7CD43 /* baidumap-Bridging-Header.h */,
+				77F0B4821B7511940032B205 /* Location.gpx */,
 			);
 			path = baidumap;
 			sourceTree = "<group>";
@@ -462,6 +464,7 @@
 				77DE3D7C1B73D0E100B7CD43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77DE3D7D1B73D0E100B7CD43 /* Build configuration list for PBXNativeTarget "baidumapTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +473,7 @@
 				77DE3D7F1B73D0E100B7CD43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
