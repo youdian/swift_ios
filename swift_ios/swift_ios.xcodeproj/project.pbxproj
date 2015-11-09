@@ -231,6 +231,11 @@
 					770625021BDE765A006F1B58 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 2M8ZU3G729;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					770625161BDE765A006F1B58 = {
 						CreatedOnToolsVersion = 7.0.1;

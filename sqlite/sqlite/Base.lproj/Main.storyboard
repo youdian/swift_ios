@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sqlite" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B43-Ph-Zw7">
+                                <rect key="frame" x="245" y="58" width="110" height="30"/>
+                                <state key="normal" title="createTable"/>
+                                <connections>
+                                    <action selector="createTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bOp-Ha-PZs"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mx8-9r-1w9">
+                                <rect key="frame" x="20" y="123" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="desc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5iL-ie-CDl">
+                                <rect key="frame" x="20" y="193" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jps-1B-gwt">
+                                <rect key="frame" x="280" y="285" width="40" height="30"/>
+                                <state key="normal" title="insert"/>
+                                <connections>
+                                    <action selector="insertRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NC5-Nx-gGb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l90-fy-uKn">
+                                <rect key="frame" x="280" y="371" width="40" height="30"/>
+                                <state key="normal" title="query"/>
+                                <connections>
+                                    <action selector="queryRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47g-ca-m5y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0T-Jy-ylr">
+                                <rect key="frame" x="279" y="431" width="43" height="30"/>
+                                <state key="normal" title="delete"/>
+                                <connections>
+                                    <action selector="deleteRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="whK-4c-t0W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l90-fy-uKn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="82u-fz-NMD"/>
+                            <constraint firstItem="5iL-ie-CDl" firstAttribute="trailing" secondItem="mx8-9r-1w9" secondAttribute="trailing" id="CvS-S4-MeL"/>
+                            <constraint firstItem="B43-Ph-Zw7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="Dlb-mn-H42"/>
+                            <constraint firstItem="l90-fy-uKn" firstAttribute="leading" secondItem="jps-1B-gwt" secondAttribute="leading" id="Ih4-8M-lFl"/>
+                            <constraint firstItem="p0T-Jy-ylr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QXp-c3-vwX"/>
+                            <constraint firstItem="l90-fy-uKn" firstAttribute="top" secondItem="jps-1B-gwt" secondAttribute="bottom" constant="56" id="T1M-fB-a81"/>
+                            <constraint firstItem="jps-1B-gwt" firstAttribute="centerX" secondItem="B43-Ph-Zw7" secondAttribute="centerX" id="VQc-km-ayu"/>
+                            <constraint firstItem="mx8-9r-1w9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vhz-De-z3M"/>
+                            <constraint firstItem="jps-1B-gwt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bPO-2N-f3b"/>
+                            <constraint firstItem="p0T-Jy-ylr" firstAttribute="centerX" secondItem="l90-fy-uKn" secondAttribute="centerX" id="bld-7U-AWr"/>
+                            <constraint firstItem="mx8-9r-1w9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fy5-2X-F73"/>
+                            <constraint firstItem="5iL-ie-CDl" firstAttribute="leading" secondItem="mx8-9r-1w9" secondAttribute="leading" id="iVw-gB-20E"/>
+                            <constraint firstItem="jps-1B-gwt" firstAttribute="top" secondItem="5iL-ie-CDl" secondAttribute="bottom" constant="62" id="lXk-ec-cM5"/>
+                            <constraint firstItem="p0T-Jy-ylr" firstAttribute="top" secondItem="l90-fy-uKn" secondAttribute="bottom" constant="30" id="mRf-kK-SRx"/>
+                            <constraint firstItem="mx8-9r-1w9" firstAttribute="top" secondItem="B43-Ph-Zw7" secondAttribute="bottom" constant="35" id="oAc-Uo-IU9"/>
+                            <constraint firstItem="B43-Ph-Zw7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wk9-bZ-c8g"/>
+                            <constraint firstItem="5iL-ie-CDl" firstAttribute="top" secondItem="mx8-9r-1w9" secondAttribute="bottom" constant="40" id="zyX-Gv-RId"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="desc" destination="5iL-ie-CDl" id="GU4-En-keP"/>
+                        <outlet property="titleContent" destination="mx8-9r-1w9" id="sTh-TC-UCh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="430"/>
+        </scene>
+    </scenes>
+</document>
