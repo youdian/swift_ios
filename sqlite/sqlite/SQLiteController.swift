@@ -11,6 +11,8 @@ import UIKit
 class SQLiteController: NSObject {
     // database name
     let db_name = "example.db"
+    let db_version = 2
+    let key_db_version = "db_version"
     let sql_create_table = "create table if not exists desc (id integer primary key autoincrement, title text, desc text)"
     let sql_query = "select * from desc"
     var db: COpaquePointer = nil
@@ -86,10 +88,29 @@ class SQLiteController: NSObject {
         }
     }
     
-    
+    func upgradeDatabase(var localVersion: Int, newVersion: Int) {
+        while localVersion < newVersion {
+            switch localVersion {
+            case 0:
+                executeNoQuery(sql_create_table)
+            case 1:
+                executeNoQuery("alter table desc add column link text")
+            default:
+                break
+            }
+            ++localVersion
+        }
+        NSUserDefaults.standardUserDefaults().setInteger(newVersion, forKey: key_db_version)
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
     
     override init() {
-        
+        super.init()
+        let localVersion = NSUserDefaults.standardUserDefaults().integerForKey(key_db_version)
+        print("localVersion:\(localVersion)")
+        if (localVersion < db_version) {
+            upgradeDatabase(localVersion, newVersion: db_version)
+        }
     }
     
     deinit {

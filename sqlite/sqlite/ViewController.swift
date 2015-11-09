@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var titleContent: UITextField!
     @IBOutlet weak var desc: UITextField!
+    @IBOutlet weak var extra: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,7 +30,8 @@ class ViewController: UIViewController {
     @IBAction func insertRecord(sender: UIButton) {
         let title = titleContent.text!
         let content = desc.text!
-        let sql = "insert into desc(title, desc) values ('\(title)', '\(content)')"
+        let extraContent = extra.text!
+        let sql = "insert into desc(title, desc, link) values ('\(title)', '\(content)','\(extraContent)')"
         SQLiteController.sharedInstance.executeNoQuery(sql)
     }
     @IBAction func queryRecords(sender: UIButton) {
