@@ -14,8 +14,8 @@
 		77F390CB1BF1A008009D4035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F390C91BF1A008009D4035 /* LaunchScreen.storyboard */; };
 		77F390D61BF1A008009D4035 /* slidingmenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F390D51BF1A008009D4035 /* slidingmenuTests.swift */; };
 		77F390E11BF1A008009D4035 /* slidingmenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F390E01BF1A008009D4035 /* slidingmenuUITests.swift */; };
-		77F390EF1BF1A8B4009D4035 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F390EE1BF1A8B4009D4035 /* CenterViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		77F390F11BF1A8C2009D4035 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F390F01BF1A8C2009D4035 /* LeftViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		77F390EF1BF1A8B4009D4035 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F390EE1BF1A8B4009D4035 /* CenterViewController.swift */; };
+		77F390F11BF1A8C2009D4035 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F390F01BF1A8C2009D4035 /* LeftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +193,8 @@
 		77F390B51BF1A007009D4035 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = youdian.org;
 				TargetAttributes = {
@@ -407,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = slidingmenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.youdian.slidingmenu;
@@ -418,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = slidingmenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.youdian.slidingmenu;
@@ -492,6 +496,7 @@
 				77F390E71BF1A008009D4035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77F390E81BF1A008009D4035 /* Build configuration list for PBXNativeTarget "slidingmenuTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				77F390EA1BF1A008009D4035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77F390EB1BF1A008009D4035 /* Build configuration list for PBXNativeTarget "slidingmenuUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +514,7 @@
 				77F390ED1BF1A008009D4035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

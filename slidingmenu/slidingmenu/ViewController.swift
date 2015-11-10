@@ -21,10 +21,13 @@ class ViewController: UIViewController {
             return self.centerNavigationController.view.frame.origin.x
         }
         set {
-            UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: {
+            self.centerNavigationController.view.layer.shadowOpacity = newValue == 0 ? 0 : 0.5
+            let dura = Double(abs(newValue - originX) / maxOriginX) * duration
+            print("anim duration:\(dura)")
+            UIView.animateWithDuration(dura, delay: 0, options: .CurveEaseOut, animations: {
                     self.centerNavigationController.view.frame.origin.x = newValue
                 }, completion: {completed in
-                    print("originX:\(newValue)")
+                    print("originX:\(newValue)\n", terminator: "")
             })
             
             
@@ -60,7 +63,6 @@ class ViewController: UIViewController {
             if (leftViewController == nil) {
                 addLeftViewController()
             }
-            recognizer.view!.layer.shadowOpacity = 0.8
         case .Changed:
             let translation = recognizer.translationInView(self.view)
             self.centerNavigationController.view.frame.origin.x = min(max(0, originX + translation.x), maxOriginX)
