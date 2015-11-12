@@ -13,6 +13,7 @@
 		77DE3ECE1B6FC69D00439BB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DE3ECD1B6FC69D00439BB6 /* Images.xcassets */; };
 		77DE3ED11B6FC69D00439BB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77DE3ECF1B6FC69D00439BB6 /* LaunchScreen.xib */; };
 		77DE3EDD1B6FC69D00439BB6 /* textfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE3EDC1B6FC69D00439BB6 /* textfieldTests.swift */; };
+		77F198C01BF4FD47004B09E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F198BF1BF4FD47004B09E0 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		77DE3ED61B6FC69D00439BB6 /* textfieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = textfieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DE3EDB1B6FC69D00439BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DE3EDC1B6FC69D00439BB6 /* textfieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textfieldTests.swift; sourceTree = "<group>"; };
+		77F198BF1BF4FD47004B09E0 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				77DE3ECD1B6FC69D00439BB6 /* Images.xcassets */,
 				77DE3ECF1B6FC69D00439BB6 /* LaunchScreen.xib */,
 				77DE3EC41B6FC69D00439BB6 /* Supporting Files */,
+				77F198BF1BF4FD47004B09E0 /* SecondViewController.swift */,
 			);
 			path = textfield;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 		77DE3EB91B6FC69D00439BB6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = youdian.org;
 				TargetAttributes = {
@@ -212,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F198C01BF4FD47004B09E0 /* SecondViewController.swift in Sources */,
 				77DE3EC91B6FC69D00439BB6 /* ViewController.swift in Sources */,
 				77DE3EC71B6FC69D00439BB6 /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +414,7 @@
 				77DE3EE21B6FC69D00439BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77DE3EE31B6FC69D00439BB6 /* Build configuration list for PBXNativeTarget "textfieldTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +423,7 @@
 				77DE3EE51B6FC69D00439BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
