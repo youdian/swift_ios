@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Main-->
@@ -31,7 +32,12 @@
                             <constraint firstItem="AgD-n5-80Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uGr-VQ-mGH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HVn-gx-sZS"/>
+                    <navigationItem key="navigationItem" id="HVn-gx-sZS">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" id="Duk-tY-W75"/>
+                            <barButtonItem image="NavigationIcon" id="a67-kB-I9q"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,4 +133,7 @@
             <point key="canvasLocation" x="305" y="1089"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NavigationIcon" width="75" height="75"/>
+    </resources>
 </document>
