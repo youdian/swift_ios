@@ -156,6 +156,7 @@
 		77284C191B790C3B00759DEB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = youdian.org;
 				TargetAttributes = {
@@ -409,6 +410,7 @@
 				77284C421B790C3B00759DEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77284C431B790C3B00759DEB /* Build configuration list for PBXNativeTarget "animationdemoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +419,7 @@
 				77284C451B790C3B00759DEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
