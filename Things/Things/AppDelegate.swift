@@ -16,9 +16,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        setupRootController()
         return true
     }
+    // 判断是否显示引导页
+    func setupRootController() {
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window!.makeKeyAndVisible()
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let bundleVersion = Int(Bundle.bundleVersion)
+        print("bundleVersion:\(bundleVersion)")
+        let savedBundleVersion = userDefaults.integerForKey(UserDefaultsKeys.Key_Bundle_Version)
+        print("savedBundleVersion:\(savedBundleVersion)")
+        userDefaults.setInteger(bundleVersion!, forKey: UserDefaultsKeys.Key_Bundle_Version)
+        userDefaults.synchronize()
+        if bundleVersion <= savedBundleVersion || !IntroViewController.hasNewIntroPage
+        {
+            let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let rootController = storyBoard.instantiateInitialViewController()
+            window!.rootViewController = rootController
+            
+        } else {
+            let storyBoard = UIStoryboard(name: "Intro", bundle: NSBundle.mainBundle())
+            let rootController = storyBoard.instantiateInitialViewController()
+            window!.rootViewController = rootController
+        }
 
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

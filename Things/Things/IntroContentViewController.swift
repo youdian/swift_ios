@@ -22,7 +22,7 @@ class IntroContentViewController: UIViewController {
         if pageIndex == IntroViewController.pageCount - 1 {
             startButton.hidden = false
         }
-        imageView.image = UIImage(named: "Launch")
+        imageView.image = UIImage(named: "Intro")
         // Do any additional setup after loading the view.
     }
 
@@ -32,7 +32,14 @@ class IntroContentViewController: UIViewController {
     }
     
     @IBAction func gotoApp(sender: UIButton) {
-        NSNotificationCenter.defaultCenter().postNotificationName("close_intro_page", object: nil)
+        gotoMainPage()
+    }
+    
+    func gotoMainPage() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let mainController = storyBoard.instantiateInitialViewController()
+        mainController?.modalTransitionStyle = .FlipHorizontal
+        presentViewController(mainController!, animated: true, completion: nil)
     }
 
     /*

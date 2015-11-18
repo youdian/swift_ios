@@ -12,4 +12,5 @@ enum ViewControllerIdentifiers: String {
     case introViewController = "IntroViewController"
     case introContentViewController = "IntroContentViewController"
     case introPageViewController = "IntroPageViewController"
+    case mainViewController = "MainViewController"
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 class IntroViewController: UIViewController {
+    static let hasNewIntroPage = true;
     static let pageCount = 3
     @IBOutlet weak var pageControl: UIPageControl!
     var pageViewController: IntroPageViewController!
@@ -25,7 +26,6 @@ class IntroViewController: UIViewController {
         view.bringSubviewToFront(pageControl)
         pageControl.numberOfPages = IntroViewController.pageCount
         pageControl.currentPage = 0
-        addCloseNotification()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,20 +38,6 @@ class IntroViewController: UIViewController {
         viewController.pageIndex = 0
         return viewController
         
-    }
-    
-    func addCloseNotification() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleNotification:", name: "close_intro_page", object: nil)
-    }
-
-    func handleNotification(notification: NSNotification) {
-        print("receiver notification")
-        UIView.animateWithDuration(0.5, animations: {
-            self.view.frame.origin.y = self.view.frame.height
-            }, completion: {
-                completed in
-                self.view.removeFromSuperview()
-        })
     }
     
     /*
