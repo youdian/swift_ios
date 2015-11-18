@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class NewRecordViewController: UIViewController {
 
@@ -23,11 +24,12 @@ class NewRecordViewController: UIViewController {
     
     func appEnterBackground(notification: NSNotification) {
         print("receive notification:\(notification.name)")
+        NSNotificationCenter.defaultCenter().removeObserver(self)
         self.presentedViewController?.dismissViewControllerAnimated(false, completion: nil)
     }
     
     @IBAction func showSelectPictureDialog(sender: UIButton) {
-        let alertController = UIAlertController(title: "title", message: "this is message", preferredStyle: .ActionSheet)
+        let alertController = UIAlertController(title: "添加图片", message: "", preferredStyle: .ActionSheet)
         let popOver = alertController.popoverPresentationController
         if popOver != nil {
             popOver?.sourceView = sender
@@ -35,20 +37,41 @@ class NewRecordViewController: UIViewController {
             popOver?.permittedArrowDirections = .Any
         }
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
-        let okAction = UIAlertAction(title: "好的", style: UIAlertActionStyle.Default, handler: nil)
+        let cameraAction = UIAlertAction(title: "拍照", style: UIAlertActionStyle.Default, handler: {action in
+            self.selectPicture(.Camera)
+        })
+        let albumAction = UIAlertAction(title: "从相册选择", style: .Default, handler: {action in
+            print("select from album")
+            self.selectPicture(.SavedPhotosAlbum)
+        })
+        let libraryAction = UIAlertAction(title: "从图片库选择", style: .Default, handler: {action in
+            self.selectPicture(.PhotoLibrary)
+        })
         alertController.addAction(cancelAction)
-        alertController.addAction(okAction)
+        alertController.addAction(cameraAction)
+        alertController.addAction(albumAction)
+        alertController.addAction(libraryAction)
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func selectPicture(sourceType: UIImagePickerControllerSourceType) {
+        let pickController = UIImagePickerController()
+        pickController.sourceType = sourceType
+        pickController.delegate = self
+        pickController.allowsEditing = true
+        presentViewController(pickController, animated: true, completion: nil)
     }
-    */
 
+}
+
+extension NewRecordViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        let contentType = info[UIImagePickerControllerMediaType] as! CFString
+        let image = info[UIImagePickerControllerOriginalImage]
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
