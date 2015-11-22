@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // 判断是否显示引导页
     func setupRootController() {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window!.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let bundleVersion = Int(Bundle.bundleVersion)
         print("bundleVersion:\(bundleVersion)")
@@ -34,12 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             let rootController = storyBoard.instantiateInitialViewController()
-            window!.rootViewController = rootController
+            window?.rootViewController = rootController
             
         } else {
             let storyBoard = UIStoryboard(name: "Intro", bundle: NSBundle.mainBundle())
             let rootController = storyBoard.instantiateInitialViewController()
-            window!.rootViewController = rootController
+            window?.rootViewController = rootController
         }
 
     }
@@ -63,6 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: () -> Void) {
+        
     }
 
 

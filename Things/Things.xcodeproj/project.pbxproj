@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77001EB51BFE209800BD9EEC /* PhotoSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77001EB41BFE209800BD9EEC /* PhotoSupplementaryView.swift */; };
 		77FAC80C1BFC387F001F302E /* NewRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FAC80B1BFC387F001F302E /* NewRecordViewController.swift */; };
 		77FAC8101BFC3DA7001F302E /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FAC80F1BFC3DA7001F302E /* Intro.storyboard */; };
+		77FAC8121BFCCD3C001F302E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77FAC8111BFCCD3C001F302E /* MobileCoreServices.framework */; };
+		77FAC8141BFCCFC1001F302E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FAC8131BFCCFC1001F302E /* Storyboard.swift */; };
+		77FAC8171BFCD454001F302E /* PhotoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FAC8161BFCD454001F302E /* PhotoListCell.swift */; };
 		77FBF34E1BFB22CA0089D39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF34D1BFB22CA0089D39B /* AppDelegate.swift */; };
 		77FBF3501BFB22CA0089D39B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF34F1BFB22CA0089D39B /* MainViewController.swift */; };
 		77FBF3531BFB22CA0089D39B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FBF3511BFB22CA0089D39B /* Main.storyboard */; };
@@ -22,6 +26,8 @@
 		77FBF38A1BFB6E4D0089D39B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF3891BFB6E4D0089D39B /* IntroViewController.swift */; };
 		77FBF38C1BFB7AFF0089D39B /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF38B1BFB7AFF0089D39B /* UserDefaultsKeys.swift */; };
 		77FBF38F1BFB980D0089D39B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF38E1BFB980D0089D39B /* Bundle.swift */; };
+		77FEF9C91C01B19E0014608F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF9C81C01B19E0014608F /* PostCell.swift */; };
+		77FEF9CC1C01B1FF0014608F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF9CB1C01B1FF0014608F /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77001EB41BFE209800BD9EEC /* PhotoSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSupplementaryView.swift; sourceTree = "<group>"; };
 		77FAC80B1BFC387F001F302E /* NewRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRecordViewController.swift; sourceTree = "<group>"; };
 		77FAC80F1BFC3DA7001F302E /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		77FAC8111BFCCD3C001F302E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		77FAC8131BFCCFC1001F302E /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		77FAC8161BFCD454001F302E /* PhotoListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCell.swift; sourceTree = "<group>"; };
 		77FBF34A1BFB22CA0089D39B /* Things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Things.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FBF34D1BFB22CA0089D39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77FBF34F1BFB22CA0089D39B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +73,8 @@
 		77FBF3891BFB6E4D0089D39B /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		77FBF38B1BFB7AFF0089D39B /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		77FBF38E1BFB980D0089D39B /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		77FEF9C81C01B19E0014608F /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		77FEF9CB1C01B1FF0014608F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77FAC8121BFCCD3C001F302E /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,18 +103,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		77FAC80A1BFC36B8001F302E /* controllers */ = {
+		77FAC80A1BFC36B8001F302E /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
 				77FBF34F1BFB22CA0089D39B /* MainViewController.swift */,
 				77FAC80B1BFC387F001F302E /* NewRecordViewController.swift */,
 			);
-			name = controllers;
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		77FAC8151BFCD3F2001F302E /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				77FAC8161BFCD454001F302E /* PhotoListCell.swift */,
+				77001EB41BFE209800BD9EEC /* PhotoSupplementaryView.swift */,
+				77FEF9C81C01B19E0014608F /* PostCell.swift */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 		77FBF3411BFB22CA0089D39B = {
 			isa = PBXGroup;
 			children = (
+				77FAC8111BFCCD3C001F302E /* MobileCoreServices.framework */,
 				77FBF34C1BFB22CA0089D39B /* Things */,
 				77FBF3611BFB22CA0089D39B /* ThingsTests */,
 				77FBF36C1BFB22CA0089D39B /* ThingsUITests */,
@@ -122,7 +146,10 @@
 		77FBF34C1BFB22CA0089D39B /* Things */ = {
 			isa = PBXGroup;
 			children = (
-				77FAC80A1BFC36B8001F302E /* controllers */,
+				77FEF9CA1C01B1EB0014608F /* model */,
+				77FEF9C71C018BF30014608F /* net */,
+				77FAC8151BFCD3F2001F302E /* cells */,
+				77FAC80A1BFC36B8001F302E /* viewcontrollers */,
 				77FBF38D1BFB97F80089D39B /* utils */,
 				77FBF3841BFB313A0089D39B /* constants */,
 				77FBF37B1BFB2B3E0089D39B /* intro */,
@@ -177,8 +204,24 @@
 			isa = PBXGroup;
 			children = (
 				77FBF38E1BFB980D0089D39B /* Bundle.swift */,
+				77FAC8131BFCCFC1001F302E /* Storyboard.swift */,
 			);
 			name = utils;
+			sourceTree = "<group>";
+		};
+		77FEF9C71C018BF30014608F /* net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = net;
+			sourceTree = "<group>";
+		};
+		77FEF9CA1C01B1EB0014608F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				77FEF9CB1C01B1FF0014608F /* Post.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,13 +361,18 @@
 			files = (
 				77FBF3881BFB31C20089D39B /* ViewControllerIdentifiers.swift in Sources */,
 				77FBF38F1BFB980D0089D39B /* Bundle.swift in Sources */,
+				77FEF9C91C01B19E0014608F /* PostCell.swift in Sources */,
 				77FBF38C1BFB7AFF0089D39B /* UserDefaultsKeys.swift in Sources */,
 				77FAC80C1BFC387F001F302E /* NewRecordViewController.swift in Sources */,
+				77FEF9CC1C01B1FF0014608F /* Post.swift in Sources */,
 				77FBF37F1BFB2B7F0089D39B /* IntroPageViewController.swift in Sources */,
 				77FBF3501BFB22CA0089D39B /* MainViewController.swift in Sources */,
+				77FAC8141BFCCFC1001F302E /* Storyboard.swift in Sources */,
 				77FBF38A1BFB6E4D0089D39B /* IntroViewController.swift in Sources */,
 				77FBF34E1BFB22CA0089D39B /* AppDelegate.swift in Sources */,
+				77001EB51BFE209800BD9EEC /* PhotoSupplementaryView.swift in Sources */,
 				77FBF3831BFB2CF60089D39B /* IntroContentViewController.swift in Sources */,
+				77FAC8171BFCD454001F302E /* PhotoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
