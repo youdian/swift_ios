@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PNg-dj-C2X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZSL-Z2-gSJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -266,6 +266,50 @@
                 <exit id="qCo-WE-KeO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2819" y="-403"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="hla-6S-nJz">
+            <objects>
+                <viewController id="ZSL-Z2-gSJ" customClass="SearchViewController" customModule="Things" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zBF-wG-VAv"/>
+                        <viewControllerLayoutGuide type="bottom" id="njH-dF-hbZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UqQ-gM-88M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mhB-GC-BDb">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZSL-Z2-gSJ" id="WrQ-K5-YWn"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mhB-GC-BDb" firstAttribute="top" secondItem="zBF-wG-VAv" secondAttribute="bottom" constant="8" id="3ct-x4-dRe"/>
+                            <constraint firstItem="mhB-GC-BDb" firstAttribute="leading" secondItem="UqQ-gM-88M" secondAttribute="leading" id="4Hd-2M-j4l"/>
+                            <constraint firstAttribute="trailing" secondItem="mhB-GC-BDb" secondAttribute="trailing" id="MH5-hi-beJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="jsx-SI-9pl" id="fbj-tb-PVN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJH-lP-0uR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="jsx-SI-9pl">
+                    <connections>
+                        <outlet property="delegate" destination="ZSL-Z2-gSJ" id="4RO-Sw-lhy"/>
+                        <outlet property="searchBar" destination="mhB-GC-BDb" id="v95-MM-RVG"/>
+                        <outlet property="searchContentsController" destination="ZSL-Z2-gSJ" id="dRM-Vm-Naa"/>
+                        <outlet property="searchResultsDataSource" destination="ZSL-Z2-gSJ" id="RuT-fk-ib7"/>
+                        <outlet property="searchResultsDelegate" destination="ZSL-Z2-gSJ" id="eRC-Bj-gAT"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="3460" y="-403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ScJ-Eg-2MB">
