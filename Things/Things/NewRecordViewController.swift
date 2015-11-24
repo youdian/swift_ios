@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class NewRecordViewController: UIViewController {
+class NewRecordViewController: BaseViewController {
 
     @IBOutlet weak var photoCollectionView: UICollectionView!
     var photos = [UIImage(named: "Launch")]

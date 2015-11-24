@@ -22,14 +22,25 @@
 		77FBF36E1BFB22CA0089D39B /* ThingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF36D1BFB22CA0089D39B /* ThingsUITests.swift */; };
 		77FBF37F1BFB2B7F0089D39B /* IntroPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF37E1BFB2B7F0089D39B /* IntroPageViewController.swift */; };
 		77FBF3831BFB2CF60089D39B /* IntroContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF3821BFB2CF60089D39B /* IntroContentViewController.swift */; };
-		77FBF3881BFB31C20089D39B /* ViewControllerIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF3871BFB31C20089D39B /* ViewControllerIdentifiers.swift */; };
+		77FBF3881BFB31C20089D39B /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF3871BFB31C20089D39B /* Identifiers.swift */; };
 		77FBF38A1BFB6E4D0089D39B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF3891BFB6E4D0089D39B /* IntroViewController.swift */; };
 		77FBF38C1BFB7AFF0089D39B /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF38B1BFB7AFF0089D39B /* UserDefaultsKeys.swift */; };
 		77FBF38F1BFB980D0089D39B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBF38E1BFB980D0089D39B /* Bundle.swift */; };
 		77FD48901C02EC5F0071A335 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD488F1C02EC5F0071A335 /* SearchViewController.swift */; };
 		77FD48971C0384D10071A335 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD48961C0384D10071A335 /* UIImage+Decompression.swift */; };
+		77FD48991C0398850071A335 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD48981C0398850071A335 /* LoginViewController.swift */; };
 		77FEF9C91C01B19E0014608F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF9C81C01B19E0014608F /* PostCell.swift */; };
 		77FEF9CC1C01B1FF0014608F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF9CB1C01B1FF0014608F /* Post.swift */; };
+		77FF6EC11C04626C0093A19F /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6EC01C04626C0093A19F /* RoundedCornerView.swift */; };
+		77FF6EC51C0464010093A19F /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6EC41C0464010093A19F /* UIColor+RGB.swift */; };
+		77FF6EC71C0472C70093A19F /* colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77FF6EC61C0472C70093A19F /* colors.plist */; };
+		77FF6EC91C0473470093A19F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6EC81C0473470093A19F /* Colors.swift */; };
+		77FF6ECB1C047A4C0093A19F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6ECA1C047A4C0093A19F /* BaseViewController.swift */; };
+		77FF6ECF1C04B76C0093A19F /* RoundedRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6ECE1C04B76C0093A19F /* RoundedRectButton.swift */; };
+		77FF6ED31C04C6130093A19F /* UIAlertController+SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6ED21C04C6130093A19F /* UIAlertController+SimpleAlert.swift */; };
+		77FF6ED51C04C77C0093A19F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6ED41C04C77C0093A19F /* String+Extension.swift */; };
+		77FF6ED71C04F3C90093A19F /* NSMutableURLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6ED61C04F3C90093A19F /* NSMutableURLRequest+Extension.swift */; };
+		77FF6ED91C04FB3E0093A19F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6ED81C04FB3E0093A19F /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,14 +82,25 @@
 		77FBF36F1BFB22CA0089D39B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77FBF37E1BFB2B7F0089D39B /* IntroPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPageViewController.swift; sourceTree = "<group>"; };
 		77FBF3821BFB2CF60089D39B /* IntroContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroContentViewController.swift; sourceTree = "<group>"; };
-		77FBF3871BFB31C20089D39B /* ViewControllerIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentifiers.swift; sourceTree = "<group>"; };
+		77FBF3871BFB31C20089D39B /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		77FBF3891BFB6E4D0089D39B /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		77FBF38B1BFB7AFF0089D39B /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		77FBF38E1BFB980D0089D39B /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		77FD488F1C02EC5F0071A335 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		77FD48961C0384D10071A335 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
+		77FD48981C0398850071A335 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77FEF9C81C01B19E0014608F /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		77FEF9CB1C01B1FF0014608F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		77FF6EC01C04626C0093A19F /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		77FF6EC41C0464010093A19F /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		77FF6EC61C0472C70093A19F /* colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colors.plist; sourceTree = "<group>"; };
+		77FF6EC81C0473470093A19F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		77FF6ECA1C047A4C0093A19F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		77FF6ECE1C04B76C0093A19F /* RoundedRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedRectButton.swift; sourceTree = "<group>"; };
+		77FF6ED21C04C6130093A19F /* UIAlertController+SimpleAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SimpleAlert.swift"; sourceTree = "<group>"; };
+		77FF6ED41C04C77C0093A19F /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		77FF6ED61C04F3C90093A19F /* NSMutableURLRequest+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableURLRequest+Extension.swift"; sourceTree = "<group>"; };
+		77FF6ED81C04FB3E0093A19F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +135,9 @@
 				77FBF34F1BFB22CA0089D39B /* MainViewController.swift */,
 				77FAC80B1BFC387F001F302E /* NewRecordViewController.swift */,
 				77FD488F1C02EC5F0071A335 /* SearchViewController.swift */,
+				77FD48981C0398850071A335 /* LoginViewController.swift */,
+				77FF6ECA1C047A4C0093A19F /* BaseViewController.swift */,
+				77FF6ED81C04FB3E0093A19F /* RegisterViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +148,8 @@
 				77FAC8161BFCD454001F302E /* PhotoListCell.swift */,
 				77001EB41BFE209800BD9EEC /* PhotoSupplementaryView.swift */,
 				77FEF9C81C01B19E0014608F /* PostCell.swift */,
+				77FF6EC01C04626C0093A19F /* RoundedCornerView.swift */,
+				77FF6ECE1C04B76C0093A19F /* RoundedRectButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -198,8 +225,9 @@
 		77FBF3841BFB313A0089D39B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				77FBF3871BFB31C20089D39B /* ViewControllerIdentifiers.swift */,
+				77FBF3871BFB31C20089D39B /* Identifiers.swift */,
 				77FBF38B1BFB7AFF0089D39B /* UserDefaultsKeys.swift */,
+				77FF6EC81C0473470093A19F /* Colors.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -217,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				77FBF3541BFB22CA0089D39B /* Assets.xcassets */,
+				77FF6EC61C0472C70093A19F /* colors.plist */,
 			);
 			name = Assets;
 			path = ..;
@@ -252,6 +281,10 @@
 			isa = PBXGroup;
 			children = (
 				77FD48961C0384D10071A335 /* UIImage+Decompression.swift */,
+				77FF6EC41C0464010093A19F /* UIColor+RGB.swift */,
+				77FF6ED21C04C6130093A19F /* UIAlertController+SimpleAlert.swift */,
+				77FF6ED41C04C77C0093A19F /* String+Extension.swift */,
+				77FF6ED61C04F3C90093A19F /* NSMutableURLRequest+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -380,6 +413,7 @@
 			files = (
 				77FBF3581BFB22CA0089D39B /* LaunchScreen.storyboard in Resources */,
 				77FBF3551BFB22CA0089D39B /* Assets.xcassets in Resources */,
+				77FF6EC71C0472C70093A19F /* colors.plist in Resources */,
 				77FBF3531BFB22CA0089D39B /* Main.storyboard in Resources */,
 				77FAC8101BFC3DA7001F302E /* Intro.storyboard in Resources */,
 			);
@@ -407,19 +441,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				77FD48901C02EC5F0071A335 /* SearchViewController.swift in Sources */,
-				77FBF3881BFB31C20089D39B /* ViewControllerIdentifiers.swift in Sources */,
+				77FBF3881BFB31C20089D39B /* Identifiers.swift in Sources */,
 				77FBF38F1BFB980D0089D39B /* Bundle.swift in Sources */,
 				77FEF9C91C01B19E0014608F /* PostCell.swift in Sources */,
 				77FBF38C1BFB7AFF0089D39B /* UserDefaultsKeys.swift in Sources */,
+				77FF6ED31C04C6130093A19F /* UIAlertController+SimpleAlert.swift in Sources */,
+				77FF6ECF1C04B76C0093A19F /* RoundedRectButton.swift in Sources */,
+				77FF6EC11C04626C0093A19F /* RoundedCornerView.swift in Sources */,
 				77FAC80C1BFC387F001F302E /* NewRecordViewController.swift in Sources */,
 				77FEF9CC1C01B1FF0014608F /* Post.swift in Sources */,
+				77FF6ED71C04F3C90093A19F /* NSMutableURLRequest+Extension.swift in Sources */,
 				77FBF37F1BFB2B7F0089D39B /* IntroPageViewController.swift in Sources */,
+				77FF6EC91C0473470093A19F /* Colors.swift in Sources */,
 				77FBF3501BFB22CA0089D39B /* MainViewController.swift in Sources */,
+				77FF6EC51C0464010093A19F /* UIColor+RGB.swift in Sources */,
+				77FF6ECB1C047A4C0093A19F /* BaseViewController.swift in Sources */,
 				77FAC8141BFCCFC1001F302E /* Storyboard.swift in Sources */,
+				77FF6ED51C04C77C0093A19F /* String+Extension.swift in Sources */,
 				77FBF38A1BFB6E4D0089D39B /* IntroViewController.swift in Sources */,
 				77FBF34E1BFB22CA0089D39B /* AppDelegate.swift in Sources */,
 				77001EB51BFE209800BD9EEC /* PhotoSupplementaryView.swift in Sources */,
+				77FD48991C0398850071A335 /* LoginViewController.swift in Sources */,
 				77FD48971C0384D10071A335 /* UIImage+Decompression.swift in Sources */,
+				77FF6ED91C04FB3E0093A19F /* RegisterViewController.swift in Sources */,
 				77FBF3831BFB2CF60089D39B /* IntroContentViewController.swift in Sources */,
 				77FAC8171BFCD454001F302E /* PhotoListCell.swift in Sources */,
 			);

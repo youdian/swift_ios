@@ -16,4 +16,14 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return decompressedImage
     }
+    
+    static func backgroundImageFromColor(color: UIColor, andSize size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContext(size)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, color.CGColor)
+        CGContextFillRect(context, CGRectMake(0, 0, size.width, size.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 }

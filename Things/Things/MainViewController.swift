@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
     @IBOutlet weak var postList: UITableView!
     var posts: [Post]!
     override func viewDidLoad() {

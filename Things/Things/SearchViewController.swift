@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: BaseViewController {
 
     var data: [String] = [String]()
     var filteredData: [String] = [String]()

@@ -14,3 +14,11 @@ enum ViewControllerIdentifiers: String {
     case introPageViewController = "IntroPageViewController"
     case mainViewController = "MainViewController"
 }
+
+enum CellIdentifiers: String {
+    case example = "example"
+}
+
+enum SegueIdentifiers: String {
+    case login = "loginSegue"
+}

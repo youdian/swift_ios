@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         setupRootController()
+        UINavigationBar.appearance().barTintColor = UIColor.colorFromRGB(Color.headerBgColor.rawValue)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         return true
     }
     // 判断是否显示引导页
