@@ -28,9 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let bundleVersion = Int(Bundle.bundleVersion)
         print("bundleVersion:\(bundleVersion)")
-        let savedBundleVersion = userDefaults.integerForKey(UserDefaultsKeys.Key_Bundle_Version)
+        let savedBundleVersion = userDefaults.integerForKey(Keys.Key_Bundle_Version.rawValue)
         print("savedBundleVersion:\(savedBundleVersion)")
-        userDefaults.setInteger(bundleVersion!, forKey: UserDefaultsKeys.Key_Bundle_Version)
+        userDefaults.setInteger(bundleVersion!, forKey: Keys.Key_Bundle_Version.rawValue)
         userDefaults.synchronize()
         if bundleVersion <= savedBundleVersion || !IntroViewController.hasNewIntroPage
         {

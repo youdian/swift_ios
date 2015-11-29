@@ -8,7 +8,17 @@
 
 import Foundation
 
-class UserDefaultsKeys {
-    //indicates whether should show the intro page
-    static let Key_Bundle_Version = "key_bundle_version"
+enum Keys: String {
+    //保存app版本号
+    case Key_Bundle_Version = "key_bundle_version"
+    
+    //保存网络域名地址
+    case baseUrl = "key_base_url"
+    
+    case sessionToken = "key_session_token"
+    
+    case username = "key_username"
+    
+    case userObjectId = "key_user_object_id"
+    
 }

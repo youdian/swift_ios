@@ -34,13 +34,40 @@ class LoginViewController: BaseViewController {
             presentViewController(alert, animated: true, completion: nil)
             return
         }
-        let url = "https://api.leancloud.cn/1.1/login"
+        let url = Urls.baseUrl + "login"
         let dict = ["username": username!, "password": password!]
         let session = NSURLSession.sharedSession()
-        let request = NSMutableURLRequest.leanCloudRequestWithUrl(url, body: dict)
+        let request = NSMutableURLRequest.leanCloudRequestWithUrl(url, body: dict, needToken: false)
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error in
-            let out = String(data: data!, encoding: NSUTF8StringEncoding)
-            print(out)
+            if error != nil {
+                print("error occurred while requesting \(error)")
+                return
+            }
+            
+
+            if let response = response as? NSHTTPURLResponse {
+                let statusCode = response.statusCode
+                let output = String(data: data!, encoding: NSUTF8StringEncoding)
+                print(output)
+                let jsonDict = try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+                if statusCode == 200 {
+                    if let jsonDict = jsonDict {
+                        let sessionToken = jsonDict["sessionToken"] as! String
+                        User.sessionToken = sessionToken
+                        let username = jsonDict["username"] as! String
+                        User.username = username
+                        let objectId = jsonDict["objectId"] as! String
+                        User.objectId = objectId
+                    }
+
+
+                } else {
+                    let code = jsonDict!["code"] as! String
+//                    let
+                }
+
+                
+            }
         })
         task.resume()
         

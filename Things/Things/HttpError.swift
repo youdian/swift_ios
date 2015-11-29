@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct HttpError {
+    var code: Int
+    var desc: String
+}

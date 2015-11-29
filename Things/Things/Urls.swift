@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class Urls {
+    private static let defaultUrl = "https://leancloud.cn/1.1/"
+    static var baseUrl: String = defaultUrl
+    
+}
+    

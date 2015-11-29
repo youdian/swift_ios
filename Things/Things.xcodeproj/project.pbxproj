@@ -29,6 +29,9 @@
 		77FD48901C02EC5F0071A335 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD488F1C02EC5F0071A335 /* SearchViewController.swift */; };
 		77FD48971C0384D10071A335 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD48961C0384D10071A335 /* UIImage+Decompression.swift */; };
 		77FD48991C0398850071A335 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD48981C0398850071A335 /* LoginViewController.swift */; };
+		77FE43071C05EC1500DD6142 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE43061C05EC1500DD6142 /* Urls.swift */; };
+		77FE43091C05F50400DD6142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE43081C05F50400DD6142 /* User.swift */; };
+		77FE430B1C060E1E00DD6142 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE430A1C060E1E00DD6142 /* HttpError.swift */; };
 		77FEF9C91C01B19E0014608F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF9C81C01B19E0014608F /* PostCell.swift */; };
 		77FEF9CC1C01B1FF0014608F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF9CB1C01B1FF0014608F /* Post.swift */; };
 		77FF6EC11C04626C0093A19F /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6EC01C04626C0093A19F /* RoundedCornerView.swift */; };
@@ -89,6 +92,9 @@
 		77FD488F1C02EC5F0071A335 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		77FD48961C0384D10071A335 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		77FD48981C0398850071A335 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		77FE43061C05EC1500DD6142 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		77FE43081C05F50400DD6142 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		77FE430A1C060E1E00DD6142 /* HttpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		77FEF9C81C01B19E0014608F /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		77FEF9CB1C01B1FF0014608F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		77FF6EC01C04626C0093A19F /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 				77FBF3871BFB31C20089D39B /* Identifiers.swift */,
 				77FBF38B1BFB7AFF0089D39B /* UserDefaultsKeys.swift */,
 				77FF6EC81C0473470093A19F /* Colors.swift */,
+				77FE43061C05EC1500DD6142 /* Urls.swift */,
+				77FE43081C05F50400DD6142 /* User.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				77FEF9CB1C01B1FF0014608F /* Post.swift */,
+				77FE430A1C060E1E00DD6142 /* HttpError.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -440,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77FE43071C05EC1500DD6142 /* Urls.swift in Sources */,
 				77FD48901C02EC5F0071A335 /* SearchViewController.swift in Sources */,
 				77FBF3881BFB31C20089D39B /* Identifiers.swift in Sources */,
 				77FBF38F1BFB980D0089D39B /* Bundle.swift in Sources */,
@@ -458,7 +468,9 @@
 				77FF6ECB1C047A4C0093A19F /* BaseViewController.swift in Sources */,
 				77FAC8141BFCCFC1001F302E /* Storyboard.swift in Sources */,
 				77FF6ED51C04C77C0093A19F /* String+Extension.swift in Sources */,
+				77FE430B1C060E1E00DD6142 /* HttpError.swift in Sources */,
 				77FBF38A1BFB6E4D0089D39B /* IntroViewController.swift in Sources */,
+				77FE43091C05F50400DD6142 /* User.swift in Sources */,
 				77FBF34E1BFB22CA0089D39B /* AppDelegate.swift in Sources */,
 				77001EB51BFE209800BD9EEC /* PhotoSupplementaryView.swift in Sources */,
 				77FD48991C0398850071A335 /* LoginViewController.swift in Sources */,

@@ -21,8 +21,8 @@ class RegisterViewController: BaseViewController {
         let username = usernameInput.text
         let password = passwordInput.text
         let dict = ["username": username!, "password": password!]
-        let url = "https://api.leancloud.cn/1.1/users"
-        let request = NSMutableURLRequest.leanCloudRequestWithUrl(url, body: dict)
+        let url = Urls.baseUrl + "users"
+        let request = NSMutableURLRequest.leanCloudRequestWithUrl(url, body: dict, needToken: false)
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: {data, response, error in
             let out = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print(out)
