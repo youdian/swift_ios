@@ -17,7 +17,7 @@
 		7704B29A1C0A2C4C00A48ECD /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7704B2991C0A2C4C00A48ECD /* LabelCell.swift */; };
 		775341861C0AD0A600E23058 /* ExpandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775341851C0AD0A600E23058 /* ExpandViewController.swift */; };
 		775341881C0AD0FF00E23058 /* ExpandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775341871C0AD0FF00E23058 /* ExpandCell.swift */; };
-		7753418A1C0AE77E00E23058 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775341891C0AE77E00E23058 /* RefreshView.swift */; };
+		7753418A1C0AE77E00E23058 /* PullToRefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775341891C0AE77E00E23058 /* PullToRefreshHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		7704B2991C0A2C4C00A48ECD /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		775341851C0AD0A600E23058 /* ExpandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandViewController.swift; sourceTree = "<group>"; };
 		775341871C0AD0FF00E23058 /* ExpandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandCell.swift; sourceTree = "<group>"; };
-		775341891C0AE77E00E23058 /* RefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		775341891C0AE77E00E23058 /* PullToRefreshHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				7704B2991C0A2C4C00A48ECD /* LabelCell.swift */,
 				775341851C0AD0A600E23058 /* ExpandViewController.swift */,
 				775341871C0AD0FF00E23058 /* ExpandCell.swift */,
-				775341891C0AE77E00E23058 /* RefreshView.swift */,
+				775341891C0AE77E00E23058 /* PullToRefreshHeaderView.swift */,
 			);
 			path = tableviewdemo;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7753418A1C0AE77E00E23058 /* RefreshView.swift in Sources */,
+				7753418A1C0AE77E00E23058 /* PullToRefreshHeaderView.swift in Sources */,
 				775341861C0AD0A600E23058 /* ExpandViewController.swift in Sources */,
 				7704B26E1C0A2BE500A48ECD /* ViewController.swift in Sources */,
 				775341881C0AD0FF00E23058 /* ExpandCell.swift in Sources */,

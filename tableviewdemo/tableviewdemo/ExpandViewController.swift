@@ -11,14 +11,14 @@ import UIKit
 class ExpandViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
-    var refreshView: RefreshView!
+    var refreshView: PullToRefreshHeaderView!
     var expandId = -1
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
         table.rowHeight = UITableViewAutomaticDimension
-        refreshView = RefreshView(frame: CGRectMake(0, -CGRectGetHeight(table.bounds), CGRectGetWidth(table.bounds), CGRectGetHeight(table.bounds)))
+        refreshView = PullToRefreshHeaderView(frame: CGRectMake(0, -CGRectGetHeight(table.bounds), CGRectGetWidth(table.bounds), CGRectGetHeight(table.bounds)))
         refreshView.delegate = self
         table.addSubview(refreshView)
     }
@@ -31,9 +31,9 @@ class ExpandViewController: UIViewController {
     func loadData() {
         let queue = NSOperationQueue()
         let blockOperation = NSBlockOperation(block: {
-            NSThread.sleepForTimeInterval(3)
+            NSThread.sleepForTimeInterval(1)
             NSOperationQueue.mainQueue().addOperationWithBlock({
-                self.refreshView.finishLoading()
+                self.refreshView.finishLoading(self.table)
                 print("finish loading")
             })
         })
@@ -42,18 +42,14 @@ class ExpandViewController: UIViewController {
 
 }
 
-extension ExpandViewController: RefreshViewDelegate {
-    func onLoading() {
+extension ExpandViewController: PullToRefreshHeaderViewDelegate {
+    func startLoading() {
         performSelector("loadData", withObject: self)
     }
 }
 
 extension ExpandViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        print("scrollViewDidEndDecelerating...")
-        refreshView.scrollViewDidEndDecelerating(scrollView)
-    }
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         refreshView.scrollViewDidEndDragging(scrollView, willDecelerate: decelerate)
     }
