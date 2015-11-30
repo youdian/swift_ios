@@ -11,27 +11,80 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var labe: UILabel!
-    
-    let text = "这首歌是剧中人物芳汀因拒绝工厂老板调戏而丢掉了工作，为了养活女儿不得不卖掉长发，被拽掉牙齿，并出卖自己的身体成为妓女的场景。她怀念过去和旧情人美好的时光，怨恨自己天真，痛恨情人无情和这个世界的冷酷。"
+    var headImageView: UIImageView!
+    var tableView: InnerTableView!
+    let imageHeight: CGFloat = 150
     override func viewDidLoad() {
         super.viewDidLoad()
-        labe.text = text
-        labe.backgroundColor = UIColor.brownColor()
-        scrollView.backgroundColor = UIColor.lightGrayColor()
-        scrollView.contentInset = UIEdgeInsets(top: 100,left: 0,bottom: 0,right: 0)
-        let hiddenLabel = UILabel(frame: CGRectMake(0, -100, 320, 100))
-        hiddenLabel.text = "隐藏的label"
-        hiddenLabel.backgroundColor = UIColor.blackColor()
-        scrollView.addSubview(hiddenLabel)
-        println("scrollView offset:\(scrollView.contentOffset)")
+        headImageView = UIImageView()
+        headImageView.image = UIImage(named: "HeaderImage")
+        headImageView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: imageHeight)
+        headImageView.contentMode = .Center
+        scrollView.addSubview(headImageView)
+        tableView = InnerTableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.frame = CGRect(x: 0, y: headImageView.bounds.height, width: view.bounds.width, height: 0)
+        tableView.heightChangedDelegate = self
+        scrollView.addSubview(tableView)
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: 0)
+        print(view.bounds)
+        print(scrollView.bounds)
+        scrollView.delegate = self
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
 
 }
 
+extension ViewController: InnerTableViewDelegate {
+    func tableView(tableView: InnerTableView, heightChangedTo height: CGFloat) {
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: headImageView.bounds.height + height)
+    }
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView == self.scrollView {
+            let offset = scrollView.contentOffset.y
+            print("offset=\(offset)")
+            if offset < 0 {
+                let percent = (-offset + imageHeight ) / imageHeight
+                print("scale percent = \(percent)")
+                headImageView.transform = CGAffineTransformMakeScale(percent, percent)
+            } else if offset == 0 {
+                headImageView.transform = CGAffineTransformIdentity
+            }
+        }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 45
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        cell.textLabel?.text = "hello \(indexPath.row)"
+        return cell
+    }
+}
