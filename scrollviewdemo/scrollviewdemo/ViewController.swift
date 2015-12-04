@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         headImageView = UIImageView()
         headImageView.image = UIImage(named: "HeaderImage")
         headImageView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: imageHeight)
-        headImageView.contentMode = .Center
+        headImageView.contentMode = .ScaleAspectFill
         scrollView.addSubview(headImageView)
         tableView = InnerTableView()
         tableView.dataSource = self
@@ -43,6 +43,9 @@ class ViewController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
 
 

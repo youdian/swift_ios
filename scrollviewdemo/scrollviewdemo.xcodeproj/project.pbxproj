@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7702E2521C0C3B6F007DF638 /* ImageViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702E2511C0C3B6F007DF638 /* ImageViewerController.swift */; };
+		770AA21E1C0CC8B500283EBD /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770AA21D1C0CC8B500283EBD /* ImageViewController.swift */; };
 		7713D6C31B7F424100D44EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713D6C21B7F424100D44EF5 /* AppDelegate.swift */; };
 		7713D6C51B7F424100D44EF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713D6C41B7F424100D44EF5 /* ViewController.swift */; };
 		7713D6CA1B7F424100D44EF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7713D6C91B7F424100D44EF5 /* Images.xcassets */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7702E2511C0C3B6F007DF638 /* ImageViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewerController.swift; sourceTree = "<group>"; };
+		770AA21D1C0CC8B500283EBD /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		7713D6BD1B7F424100D44EF5 /* scrollviewdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrollviewdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7713D6C11B7F424100D44EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7713D6C21B7F424100D44EF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				7713D6C01B7F424100D44EF5 /* Supporting Files */,
 				7753418D1C0B242800E23058 /* Main.storyboard */,
 				7753418F1C0B731000E23058 /* InnerTableView.swift */,
+				7702E2511C0C3B6F007DF638 /* ImageViewerController.swift */,
+				770AA21D1C0CC8B500283EBD /* ImageViewController.swift */,
 			);
 			path = scrollviewdemo;
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 				TargetAttributes = {
 					7713D6BC1B7F424100D44EF5 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2M8ZU3G729;
 					};
 					7713D6D11B7F424100D44EF5 = {
 						CreatedOnToolsVersion = 6.4;
@@ -218,7 +225,9 @@
 			files = (
 				7713D6C51B7F424100D44EF5 /* ViewController.swift in Sources */,
 				7713D6C31B7F424100D44EF5 /* AppDelegate.swift in Sources */,
+				770AA21E1C0CC8B500283EBD /* ImageViewController.swift in Sources */,
 				775341901C0B731000E23058 /* InnerTableView.swift in Sources */,
+				7702E2521C0C3B6F007DF638 /* ImageViewerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,11 +347,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = scrollviewdemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youdian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -350,11 +362,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = scrollviewdemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youdian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
