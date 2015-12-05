@@ -18,6 +18,9 @@ class ImageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func click(sender: UIButton) {
+        print("you click buttton")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -89,6 +92,7 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                     transitionContext.completeTransition(true)
             })
         } else {
+            animatedView.superview!.bringSubviewToFront(animatedView)
             animatedView.frame = viewerFrame
             UIView.animateWithDuration(duration, animations: {
                 self.animatedView.frame = self.originalFrame

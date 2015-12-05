@@ -62,11 +62,20 @@
                                     <outletCollection property="gestureRecognizers" destination="f6E-3S-9Cx" appends="YES" id="cgQ-S4-eVG"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMh-sA-x7d">
+                                <rect key="frame" x="277" y="107" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="click:" destination="gOe-mf-eva" eventType="touchUpInside" id="TYz-lv-upU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gmi-C3-vtK" firstAttribute="centerY" secondItem="CU1-EW-e9y" secondAttribute="centerY" id="HW5-IN-HxZ"/>
+                            <constraint firstItem="TMh-sA-x7d" firstAttribute="top" secondItem="PAt-eg-tjw" secondAttribute="bottom" constant="87" id="b7g-S2-5Iv"/>
                             <constraint firstItem="gmi-C3-vtK" firstAttribute="centerX" secondItem="CU1-EW-e9y" secondAttribute="centerX" id="h5t-kK-dNQ"/>
+                            <constraint firstItem="TMh-sA-x7d" firstAttribute="centerX" secondItem="gmi-C3-vtK" secondAttribute="centerX" id="yvu-8d-Jly"/>
                         </constraints>
                     </view>
                     <connections>
